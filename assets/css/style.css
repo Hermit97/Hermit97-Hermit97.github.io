@@ -1,60 +1,20 @@
-/* AUTHENTIC PHRACK REPLICA - WHITE ON BLACK */
 html, body {
   margin: 0;
   padding: 0;
   background: #ffffff;
   color: #000000;
 
-  /* This specific stack matches Phrack's rendering */
-  font-family: "Courier New", Courier, "Nimbus Mono L", "Liberation Mono", monospace;
+  /* We prioritize 'Courier' over 'Courier New' because it is usually thinner */
+  font-family: "Courier", "Nimbus Mono L", "Courier New", monospace;
 
-  /* 12pt is the secret - pixels (px) often look too large or too small */
+  /* 12pt is the exact Phrack scale */
   font-size: 12pt;
   line-height: 1.25;
 
-  /* CRITICAL: This stops the browser from 'softening' the letters */
+  /* THIS IS WHAT YOU ARE MISSING */
+  /* It stops the 'blur' you see in your current screenshot */
   -webkit-font-smoothing: none;
   -moz-osx-font-smoothing: auto;
+  font-smooth: never;
   text-rendering: crispEdges;
-}
-
-body {
-  /* This creates the specific column width you see in the Phrack image */
-  max-width: 740px;
-  margin: 0 auto;
-  padding: 22px 30px;
-}
-
-/* Headings: In Phrack, these are NOT bigger, just bold */
-h1, h2, h3 {
-  font-size: 12pt;
-  font-weight: bold;
-  margin: 1.1em 0 0.6em 0;
-  text-transform: uppercase;
-}
-
-/* Lists and Indents */
-ul, ol {
-  margin: 0 0 1em 2em;
-  padding: 0;
-}
-
-/* Code and terminal dumps */
-pre {
-  font-family: inherit;
-  font-size: 12pt;
-  line-height: 1.25;
-  white-space: pre;
-  margin: 1em 0;
-}
-
-/* Links: Black and underlined, flips to white on black when hovering */
-a {
-  color: #000000;
-  text-decoration: underline;
-}
-
-a:hover {
-  background: #000000;
-  color: #ffffff;
 }
