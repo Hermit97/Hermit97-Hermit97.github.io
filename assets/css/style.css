@@ -7,7 +7,7 @@ body {
     font-family: "unifont", "Lucida Console", "Monaco", "Consolas", monospace;
     
     /* Exact specs from your second inspect screenshot */
-    font-size: 16px;
+    font-size:12px;
     line-height: 1;
     
     /* Layout specs to match the centered column */
