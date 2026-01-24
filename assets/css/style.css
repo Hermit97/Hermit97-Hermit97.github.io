@@ -1,57 +1,88 @@
-/* PHRACK.ORG AUTHENTIC REPLICA */
 html, body {
   margin: 0;
   padding: 0;
-  background: #ffffff; /* Clean White */
-  color: #000000;      /* Sharp Black */
-  
-  /* The typewriter stack */
-  font-family: "Courier New", Courier, monospace;
+  background: #ffffff;
+  color: #000000;
+
+  /* Courier stack matching phrack rendering */
+  font-family:
+    "Courier New",
+    Courier,
+    "Nimbus Mono L",
+    "Liberation Mono",
+    monospace;
+
+  /* THIS is critical */
   font-size: 12pt;
   line-height: 1.25;
 
-  /* This keeps the text looking like an old printer vs a modern webpage */
+  /* Disable modern smoothing differences */
   -webkit-font-smoothing: none;
-  text-rendering: crispEdges;
+  -moz-osx-font-smoothing: auto;
+  font-smooth: never;
 }
 
-/* Page width: Phrack is narrow for easy reading */
 body {
-  max-width: 760px;
+  /* Column width matches screenshot */
+  max-width: 740px;
   margin: 0 auto;
-  padding: 24px 32px;
+
+  /* Margins tuned to phrack */
+  padding: 22px 30px;
 }
 
-/* Headings: All the same size, just bold, like a .txt file */
+/* Headings are NOT larger in Phrack */
 h1, h2, h3, h4 {
   font-size: 12pt;
   font-weight: bold;
-  margin: 1.2em 0 0.6em 0;
-  text-transform: uppercase;
+  margin: 1.1em 0 0.6em 0;
 }
 
-/* Links: Classic underlined style */
+/* Paragraph spacing */
+p {
+  margin: 0 0 1em 0;
+}
+
+/* Lists */
+ul, ol {
+  margin: 0 0 1em 2em;
+  padding: 0;
+}
+
+/* ASCII + dumps */
+pre {
+  font-family:
+    "Courier New",
+    Courier,
+    "Nimbus Mono L",
+    "Liberation Mono",
+    monospace;
+
+  font-size: 12pt;
+  line-height: 1.25;
+
+  white-space: pre;
+  margin: 1em 0;
+}
+
+/* Inline code */
+code {
+  font-family: inherit;
+  font-size: 12pt;
+}
+
+/* Links: phrack style */
 a {
   color: #000000;
   text-decoration: underline;
 }
 
-/* The 'Inverse' hover effect you liked */
 a:hover {
   background: #000000;
   color: #ffffff;
-  text-decoration: none;
 }
 
-/* Preformatted blocks for logs/code */
-pre {
-  font-family: "Courier New", Courier, monospace;
-  white-space: pre;
-  margin: 1em 0;
-  padding-left: 20px; /* The indent you found in your inspection */
-}
-
-/* Horizontal rule: The thin divider line */
+/* Horizontal rules */
 hr {
   border: none;
   border-top: 1px solid #000000;
