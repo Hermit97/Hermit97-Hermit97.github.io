@@ -1,77 +1,54 @@
+/* AUTHENTIC PHRACK REPLICA - WHITE ON BLACK */
 html, body {
   margin: 0;
   padding: 0;
   background: #ffffff;
   color: #000000;
 
-  /* Courier stack matching phrack rendering */
-  font-family:
-    "Courier New",
-    Courier,
-    "Nimbus Mono L",
-    "Liberation Mono",
-    monospace;
+  /* This specific stack matches Phrack's rendering */
+  font-family: "Courier New", Courier, "Nimbus Mono L", "Liberation Mono", monospace;
 
-  /* THIS is critical */
+  /* 12pt is the secret - pixels (px) often look too large or too small */
   font-size: 12pt;
   line-height: 1.25;
 
-  /* Disable modern smoothing differences */
+  /* CRITICAL: This stops the browser from 'softening' the letters */
   -webkit-font-smoothing: none;
   -moz-osx-font-smoothing: auto;
-  font-smooth: never;
+  text-rendering: crispEdges;
 }
 
 body {
-  /* Column width matches screenshot */
+  /* This creates the specific column width you see in the Phrack image */
   max-width: 740px;
   margin: 0 auto;
-
-  /* Margins tuned to phrack */
   padding: 22px 30px;
 }
 
-/* Headings are NOT larger in Phrack */
-h1, h2, h3, h4 {
+/* Headings: In Phrack, these are NOT bigger, just bold */
+h1, h2, h3 {
   font-size: 12pt;
   font-weight: bold;
   margin: 1.1em 0 0.6em 0;
+  text-transform: uppercase;
 }
 
-/* Paragraph spacing */
-p {
-  margin: 0 0 1em 0;
-}
-
-/* Lists */
+/* Lists and Indents */
 ul, ol {
   margin: 0 0 1em 2em;
   padding: 0;
 }
 
-/* ASCII + dumps */
+/* Code and terminal dumps */
 pre {
-  font-family:
-    "Courier New",
-    Courier,
-    "Nimbus Mono L",
-    "Liberation Mono",
-    monospace;
-
+  font-family: inherit;
   font-size: 12pt;
   line-height: 1.25;
-
   white-space: pre;
   margin: 1em 0;
 }
 
-/* Inline code */
-code {
-  font-family: inherit;
-  font-size: 12pt;
-}
-
-/* Links: phrack style */
+/* Links: Black and underlined, flips to white on black when hovering */
 a {
   color: #000000;
   text-decoration: underline;
@@ -80,11 +57,4 @@ a {
 a:hover {
   background: #000000;
   color: #ffffff;
-}
-
-/* Horizontal rules */
-hr {
-  border: none;
-  border-top: 1px solid #000000;
-  margin: 2em 0;
 }
