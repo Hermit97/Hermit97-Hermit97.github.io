@@ -60,3 +60,25 @@ a:hover {
   color: #ffffff;
   text-decoration: none;
 }
+
+
+
+/* Image Link Styles */
+div[align="center"] a img {
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+/* Adds a black border and slight dim when you hover over the image */
+div[align="center"] a:hover img {
+    border: 1px solid #000;
+    opacity: 0.8;
+}
+
+/* Style for the text labels under the images */
+div[align="center"] {
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-top: 40px;
+}
