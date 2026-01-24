@@ -1,27 +1,32 @@
-/* TmpOut-Style Layout */
 body {
-    background-color: #000;
-    color: #fff;
-    /* This creates that narrow column in the middle of the screen */
-    max-width: 750px; 
-    margin: 60px auto; 
+    background-color: #000000;
+    /* The exact color you found */
+    color: #93ffd7; 
+    
+    /* The exact font stack and size from your inspect tool */
+    font-family: "gohu", "Lucida Console", Monaco, monospace;
+    font-size: 14px;
+    
+    /* line-height 1.0 makes the text very dense/packed */
+    line-height: 1.0;
+    
+    /* Centering the content like the screenshot */
+    max-width: 800px;
+    margin: 40px auto;
     padding: 20px;
     
-    /* Font matching the 'PT_NOTE' screenshot */
-    font-family: "Courier New", Courier, monospace;
-    font-size: 15px;
-    line-height: 1.4;
-    text-rendering: optimizeLegibility;
+    /* Keeps the pixels sharp */
+    text-rendering: crispEdges;
+    -webkit-font-smoothing: none;
 }
 
-/* Red links like the screenshot */
-a { color: #ff0000; text-decoration: none; }
-a:hover { background: #ff0000; color: #fff; }
+/* Matching the red links for the 'hacker' contrast */
+a {
+    color: #ff0000;
+    text-decoration: none;
+}
 
-/* For the code snippets (like getdents64) */
-pre {
-    border-left: 1px solid #333;
-    padding-left: 15px;
-    margin: 20px 0;
-    color: #fff; 
+a:hover {
+    background: #93ffd7;
+    color: #000;
 }
