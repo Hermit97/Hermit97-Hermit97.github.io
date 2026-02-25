@@ -22,3 +22,16 @@ This led me to my next check which was analyzing the DNS protocol. Before even t
 Using the “dns.flags.response == 0 && ip.src == 10.1.21.58 && frame.time_relative > 60 && frame.time_relative < 95” filter allowed me to go on a deep analysis looking for any suspicious sites the victim may have gone on before the DNS came into contact with the attacker host whitepepper.su. 
 
 ![DNS Query Ingress Analysis](../../assets/images/dns-query-ingress-analysis.png)
+
+## The Redirect 
+Reputation analysis of the .cyou TLD revealed a high correlation with historical malicious activity. Using targeted DNS response filters, I identified the specific IP address (62.72.32.156) associated with the initial threat actor contact.
+
+## What was being sent?
+One of the big questions is what was being sent by whooptm.cyou?
+We apply http.host == "whooptm.cyou" || http.host == "whitepepper.su" to the filter to see the actual web request. 
+
+Initial host-based filtering returned null results; however, pivoting to DNS response analysis successfully isolated the attacker's primary IP infrastructure (62.72.32.156).
+
+Fortunately we can use the filter “dns.resp.name == "whooptm.cyou". This will hide everything except the ip address of whooptm.cyou. Resulting in, 
+
+Picture place holder
