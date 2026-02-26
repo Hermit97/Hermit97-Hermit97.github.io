@@ -35,6 +35,7 @@ Initial host-based filtering returned null results; however, pivoting to DNS res
 Fortunately we can use the filter “dns.resp.name == "whooptm.cyou". This will hide everything except the ip address of whooptm.cyou. Resulting in, 
 
 ![whoopsc Analysis](../../assets/images/whoopsc.png)
+
 Which gives us the address of the first contact by the attacker. 
 
 ## Learning more about the Encrypted Payload
